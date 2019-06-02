@@ -1,14 +1,29 @@
+@tailwind base;
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@tailwind components;
 
-// Variables
-@import 'variables';
+@tailwind utilities;
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+h1 {
+    @apply .text-3xl .text-black
+}
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+h2 {
+    @apply .text-2xl .pt-2 .text-black
+}
+
+h3 {
+    @apply .text-2xl .pt-2 .text-black
+}
+
+.embedded_image>p {
+    @apply .text-center .italic .text-gray-800 .leading-loose
+}
+
+.embedded_image {
+    @apply .my-4
+}
+
+p {
+    @apply .mb-2
 }
