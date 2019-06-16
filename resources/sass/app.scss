@@ -17,7 +17,7 @@ h3 {
 }
 
 .embedded_image>p {
-    @apply .text-center .italic .text-gray-800 .leading-loose
+    @apply .text-center .italic .text-gray-800 .leading-loose .flex .flex-wrap .justify-center
 }
 
 .embedded_image {
