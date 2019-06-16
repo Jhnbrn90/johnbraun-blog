@@ -27,3 +27,11 @@ h3 {
 p {
     @apply .mb-2
 }
+
+ul {
+    @apply .list-disc .p-2 .m-4
+}
+
+pre.ql-syntax {
+    @apply .my-6 .bg-gray-100 .border .border-gray-200 .rounded-lg .py-4 .px-6 .shadow-lg .overflow-hidden
+}
