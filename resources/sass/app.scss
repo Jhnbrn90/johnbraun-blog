@@ -44,3 +44,11 @@ ul {
 pre.ql-syntax {
     @apply .my-6 .bg-gray-100 .border .border-gray-200 .rounded-lg .py-4 .px-6 .shadow-lg .overflow-hidden
 }
+
+a {
+    @apply .text-blue-600
+}
+
+a:hover {
+    @apply .text-blue-300 .underline
+}
