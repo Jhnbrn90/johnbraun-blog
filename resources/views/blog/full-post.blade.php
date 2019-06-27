@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <div class="overflow-hidden text-gray-700">
+    <div class="text-gray-700">
         {!! $post->body !!}
     </div>
 </article>
