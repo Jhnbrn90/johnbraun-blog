@@ -60,3 +60,23 @@ a {
 a:hover {
     @apply .text-blue-300 .underline
 }
+
+hr { 
+    overflow: visible; /* For IE */ 
+    height: 30px; 
+    border-style: solid; 
+    border-color: #BEE3F8;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+} 
+
+hr:before { 
+    display: block;
+    content: ""; 
+    height: 30px; 
+    margin-top: -31px; 
+    border-style: solid; 
+    border-color: #BEE3F8; 
+    border-width: 0 0 1px 0; 
+    border-radius: 20px; 
+}
