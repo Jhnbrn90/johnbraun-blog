@@ -49,7 +49,7 @@ ul {
 }
 
 pre.ql-syntax {
-    overflow: scroll;
+    overflow-x: auto;
     @apply .my-6 .bg-gray-100 .border .border-gray-200 .rounded-lg .py-4 .px-6 .shadow-md
 }
 
