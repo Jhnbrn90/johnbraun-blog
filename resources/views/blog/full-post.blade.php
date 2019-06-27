@@ -8,7 +8,10 @@
             <h3 class="text-4xl text-center font-semibold leading-loose">{{ $post->title }}</h3>
         </div>
         <div class="flex justify-center">
-            <img class="max-w-md h-48" src="{{ $post->featured_image }}">
+            <div class="flex flex-col items-center">
+                <img class="max-w-md h-56 mb-4" src="{{ $post->featured_image }}">
+                <span class="italic text-gray-600"> {{ $post->featured_image_caption }} </span>
+            </div>
         </div>
     </div>
 
