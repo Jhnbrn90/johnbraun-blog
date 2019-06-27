@@ -4,9 +4,10 @@
     </div>
 
     <div class="mb-4">
-        <div class="block">
-            <h3 class="text-4xl text-center font-semibold leading-loose">{{ $post->title }}</h3>
+        <div class="flex justify-center pt-3 mb-4">
+            <h1 class="w-2/3 text-4xl font-semibold leading-loose text-center">{{ $post->title }}</h1>
         </div>
+
         <div class="flex justify-center">
             <div class="flex flex-col items-center">
                 <img class="max-w-md h-56 mb-4" src="{{ $post->featured_image }}">
