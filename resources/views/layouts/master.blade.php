@@ -16,7 +16,7 @@
         <div class="container mx-auto px-5 lg:max-w-screen">
             <h1 class="text-center text-xl">
                 <a href="/" class="no-underline text-black font-semibold">
-                    John Braun<span class="text-sm italic font-thin">'s webblog</span>
+                    John Braun<span class="text-sm italic font-thin">'s blog</span>
                 </a>
             </h1>
         </div>
