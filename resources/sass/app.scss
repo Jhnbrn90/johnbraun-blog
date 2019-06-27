@@ -50,8 +50,9 @@ ul {
 
 pre.ql-syntax {
     overflow-x: auto;
-    line-height: 1.9;
-    @apply .my-6 .bg-gray-100 .border .border-gray-200 .rounded-lg .py-4 .px-6 .shadow-md
+    line-height: 2;
+    font-size: 0.85rem;
+    @apply .my-6 .bg-indigo-100 .border .border-indigo-200 .rounded-lg .py-4 .px-6 .shadow-md
 }
 
 a {
