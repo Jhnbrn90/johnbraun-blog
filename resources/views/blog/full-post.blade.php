@@ -5,7 +5,7 @@
 
     <div class="mb-4">
         <div class="flex justify-center pt-3 mb-4">
-            <h3 class="w-3/4 sm:text-4xl text-2xl font-semibold leading-loose text-center">
+            <h3 class="w-3/4 sm:text-4xl text-xl font-semibold leading-loose text-center">
                 {{ $post->title }}
             </h3>
         </div>
