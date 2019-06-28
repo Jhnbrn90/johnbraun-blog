@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<main class="container mx-auto xl:px-20 lg:px-10 md:px-5 px-5">
-    @include('blog.full-post', ['post' => $post])
+<main class="sm:container sm:mx-auto xl:px-48 lg:px-36 md:px-16">
+        @include('blog.full-post', ['post' => $post])
 </main>
 @endsection

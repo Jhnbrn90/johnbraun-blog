@@ -1,4 +1,4 @@
-<article class="flex flex-col mb-10 rounded bg-white shadow-lg px-12 py-4">
+<article class="flex flex-col mb-10 rounded bg-white shadow-lg px-16 py-4">
     <div class="text-sm text-gray-600 font-thin">
         &mdash; Published: {{ $post->publish_date->format('d-m-Y') }}
     </div>
