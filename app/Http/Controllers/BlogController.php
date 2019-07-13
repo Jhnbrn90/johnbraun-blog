@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Wink\WinkPage;
 use Wink\WinkPost;
+use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
@@ -27,5 +28,12 @@ class BlogController extends Controller
             ->firstOrFail();
 
         return view('blog.show', compact('post'));
+    }
+
+    public function about()
+    {
+        $page = WinkPage::whereSlug('about')->firstOrFail();
+        
+        return view('blog.about', compact('page'));
     }
 }
