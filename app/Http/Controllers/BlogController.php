@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Wink\WinkPage;
-use Wink\WinkPost;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
     public function index()
     {
-        $posts = WinkPost::with('tags')
+        $posts = Post::with('tags')
             ->live()
             ->orderBy('publish_date', 'DESC')
             ->simplePaginate(12);
@@ -22,7 +22,7 @@ class BlogController extends Controller
 
     public function show($slug)
     {
-        $post = WinkPost::with('tags')
+        $post = Post::with('tags')
             ->live()
             ->whereSlug($slug)
             ->firstOrFail();
