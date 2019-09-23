@@ -5,8 +5,11 @@
                 <h3 class="text-3xl font-semibold leading-tight sm:leading-loose text-left">{{ $post->title }}</h3>
             </a>
             <p class="font-thin tracking-wide">
-                {!! Str::words($post->body, 50) !!}
-                <a class="hover:underline text-blue-400 hover:text-blue-500" href="/posts/{{ $post->slug }}">read more</a>
+                <!-- {!! Str::words($post->body, 50) !!} -->
+                {{ $post->excerpt }}
+                <br><br>
+                <a class="bg-blue-600 hover:no-underline hover:text-white px-2 py-2 rounded text-blue-100 hover:bg-blue-700 hover:shadow" 
+                href="/posts/{{ $post->slug }}">Read more...</a>
             </p>
         </div>
 
