@@ -41,11 +41,18 @@ class ListPostsTest extends TestCase
     /** @test **/
     function only_the_first_post_of_a_series_is_shown_on_the_index()
     {
-        $singlePosts = factory(Post::class, 5)->create();
+        $singlePosts = factory(Post::class, 5)->create(['publish_date' => now()]);
 
         for ($i = 1; $i < 4; $i++) {
-            $firstSeries[] = factory(Post::class)->create(['title' => "This is a first series (part {$i}/3)"]);
-            $secondSeries[] = factory(Post::class)->create(['title' => "This is a second series (part {$i}/3)"]);
+            $firstSeries[] = factory(Post::class)->create([
+                'title'         => "This is a first series (part {$i}/3)",
+                'publish_date'  => now(),
+            ]);
+
+            $secondSeries[] = factory(Post::class)->create([
+                'title'         => "This is a second series (part {$i}/3)",
+                'publish_date'    => now()->subDays(1), 
+            ]);
         }
 
         $response = $this->get('/');
@@ -61,7 +68,8 @@ class ListPostsTest extends TestCase
             && $posts->contains($singlePosts[1])
             && $posts->contains($singlePosts[2])
             && $posts->contains($singlePosts[3])
-            && $posts->contains($singlePosts[4]);
+            && $posts->contains($singlePosts[4])
+            && $posts->first()->is($secondSeries[0]);
         });
 
         $response->assertSee('This is a first series');
