@@ -68,8 +68,7 @@ class ListPostsTest extends TestCase
             && $posts->contains($singlePosts[1])
             && $posts->contains($singlePosts[2])
             && $posts->contains($singlePosts[3])
-            && $posts->contains($singlePosts[4])
-            && $posts->first()->is($secondSeries[0]);
+            && $posts->contains($singlePosts[4]);
         });
 
         $response->assertSee('This is a first series');
