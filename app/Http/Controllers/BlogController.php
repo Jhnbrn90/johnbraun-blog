@@ -30,7 +30,6 @@ class BlogController extends Controller
         });
 
         $posts = $posts->merge($series);
-        $posts = $posts->orderBy('publish_date');
 
         return view('blog.index', [
             'posts' => $posts
