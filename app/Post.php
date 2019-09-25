@@ -18,8 +18,18 @@ class Post extends WinkPost
         return config('app.url') . '/preview/' . $this->slug;
     }
 
-    public function scopeConcept()
+    public function scopeConcept($query)
     {
         return $query->where('published', 0);
+    }
+
+    public function scopeSingle($query)
+    {
+        return $query->where('title', 'NOT LIKE', '%part%');
+    }
+
+    public function scopeSeries($query)
+    {
+        return $query->where('title', 'LIKE', '%part%');
     }
 }

@@ -10,10 +10,26 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $posts = Post::with('tags')
+        $posts = Post::single()
+            ->with('tags')
             ->live()
             ->orderBy('publish_date', 'DESC')
-            ->simplePaginate(12);
+            ->get();
+
+        $series = Post::series()
+            ->with('tags')
+            ->live()
+            ->orderBy('publish_date', 'DESC')
+            ->get();
+
+        $series = $series->filter(function ($post) {
+            return preg_match('/part\s+1\s?\/\s?\d+/', $post->title, $match);
+        })->map(function ($post) {
+            $post->title = rtrim(preg_replace('/\(part\s+1\s?\/\s?\d+\)/', '', $post->title));
+            return $post;
+        });
+
+        $posts = $posts->merge($series);
 
         return view('blog.index', [
             'posts' => $posts
