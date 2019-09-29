@@ -25,6 +25,9 @@
     <meta name="msapplication-config" content="/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+    <link rel="webmention" href="https://webmention.io/johnbraun.blog/webmention" />
+    <link rel="pingback" href="https://webmention.io/johnbraun.blog/xmlrpc" />
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
 </head>
 
