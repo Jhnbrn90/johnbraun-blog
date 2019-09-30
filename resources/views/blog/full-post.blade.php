@@ -8,6 +8,17 @@
             <h3 class="w-3/4 sm:text-4xl text-xl font-semibold leading-loose text-center">
                 {{ $post->title }}
             </h3>
+
+            <a
+                href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+                class="twitter-share-button"
+                data-text="&quot;{{ rtrim(preg_replace('/\(part\s+1\s?\/\s?\d+\)/', '', $post->title)) }}&quot;"
+                data-show-count="false"
+                data-via="JhnBrn90"
+            >
+                Tweet
+            </a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
 
         <div class="flex justify-center">
