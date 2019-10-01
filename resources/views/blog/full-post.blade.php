@@ -33,3 +33,32 @@
         {!! $post->body !!}
     </div>
 </article>
+
+<div class="flex flex-col mb-10 rounded bg-white shadow-lg sm:px-16 px-10 text-justify py-4">
+    <div class="text-sm text-gray-600 font-normal mb-6 uppercase">
+        &mdash; Webmentions
+    </div>
+
+    @forelse ($post->webmentions as $mention)
+        <div class="flex flex-wrap py-2">
+            <div class="w-full flex items-center">
+                <div class="mr-2">
+                    <img class="w-6 h-6 border border-gray-800 shadow-lg rounded-full" src="{{ $mention->author_photo  }}">
+                </div>
+                <div class="mr-1">{{ $mention->author_name }}</div>
+                <div class="">
+                    <a href="{{ $mention->link }}">{{ $mention->formattedType }}</a>
+                    this post</div>
+            </div>
+            @if ($mention->content)
+            <div class="w-full mt-1 pl-8">
+                <p class="italic shadow text-left w-4/5 bg-gray-100 p-2 text-gray-700 text-sm rounded-lg border">
+                    {{ $mention->content }}
+                </p>
+            </div>
+            @endif
+        </div>
+        @empty
+        <p class="text-gray-400 text-base">No mentions.</p>
+    @endforelse
+</div>

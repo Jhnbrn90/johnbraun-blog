@@ -38,7 +38,7 @@ class BlogController extends Controller
 
     public function show($slug)
     {
-        $post = Post::with('tags')
+        $post = Post::with(['tags', 'webmentions'])
             ->live()
             ->whereSlug($slug)
             ->firstOrFail();
@@ -49,7 +49,7 @@ class BlogController extends Controller
     public function about()
     {
         $page = WinkPage::whereSlug('about')->firstOrFail();
-        
+
         return view('blog.about', compact('page'));
     }
 }

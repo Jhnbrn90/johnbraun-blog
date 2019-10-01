@@ -1,0 +1,50 @@
+{
+    "type": "feed",
+    "name": "Webmentions",
+    "children": [
+        {
+            "type": "entry",
+            "author": {
+                "type": "card",
+                "name": "John Doe",
+                "photo": "https://some.photo/1.jpg",
+                "url": "https://twitter.com/johndoe"
+            },
+            "url": "https://twitter.com/johndoe/fake-status/1",
+            "published": "2019-09-30T07:24:19+00:00",
+            "wm-received": "2019-09-30T07:47:11Z",
+            "wm-id": 1,
+            "wm-source": "https://some.interaction/link",
+            "wm-target": "https://johnbraun.blog/posts/some-post-with-webmentions",
+            "content": {
+                "html": "Some html content for post 1",
+                "text": "Some text content for post 1"
+            },
+            "mention-of": "https://johnbraun.blog/posts/some-post-with-webmentions",
+            "wm-property": "mention-of",
+            "wm-private": false
+        },
+        {
+            "type": "entry",
+            "author": {
+                "type": "card",
+                "name": "Jane Doe",
+                "photo": "https://some.photo/2.jpg",
+                "url": "https://twitter.com/janedoe"
+            },
+            "url": "https://twitter.com/johndoe/fake-status/1",
+            "published": "2019-09-30T07:24:19+00:00",
+            "wm-received": "2019-09-30T07:47:11Z",
+            "wm-id": 2,
+            "wm-source": "https://some.interaction/link-2",
+            "wm-target": "https://johnbraun.blog/posts/some-post-with-webmentions",
+            "content": {
+                "html": "Some html content for post 2",
+                "text": "Some text content for post 2"
+            },
+            "mention-of": "https://johnbraun.blog/posts/some-post-with-webmentions",
+            "wm-property": "mention-of",
+            "wm-private": false
+        }
+    ]
+}

@@ -8,6 +8,11 @@ class Post extends WinkPost
 {
     protected $table = 'wink_posts';
 
+    public function webmentions()
+    {
+        return $this->hasMany(Webmention::class);
+    }
+
     public function previewPath()
     {
         return "/preview/{$this->slug}";
