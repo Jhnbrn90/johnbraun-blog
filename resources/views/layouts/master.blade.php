@@ -40,7 +40,7 @@
                     <img class="inline sm:hidden mr-1 h-8 w-8 shadow-lg rounded-full" src="{{ url('images/profile_resized.png') }}">
                     <a href="/" class="no-underline text-black font-semibold">
                         John Braun<span class="text-sm font-thin">'s blog</span>
-                        <img class="sm:inline hidden ml-5 h-12 w-12 shadow-lg rounded-full" src="{{ url('images/profile_resized.png') }}">
+                        <img class="sm:inline hidden ml-5 h-12 w-12 shadow-lg rounded-full" src="{{ url('images/profile_resized.jpg') }}">
                     </a>
 
                     <div class="sm:block hidden flex justify-center flex-wrap text-xs tracking-tight font-semibold ml-1 align-top inline">
