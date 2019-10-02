@@ -1,7 +1,6 @@
 @extends ('layouts.master')
 
 @section('meta-tags')
-
 	<meta name="description" content="{{ $post->meta['meta_description'] }}">
 	<meta name="keywords" content="{{ implode(', ', $post->tags->pluck('name')->toArray()) }}">
 	<meta name="author" content="John Braun">
@@ -17,6 +16,12 @@
 	<meta name="og:image" content="{{ url($post->meta['opengraph_image'] ?? '') }}">
 	<meta name="og:type" content="website">
 	<meta name="og:locale" content="en_US">
+@endsection
+
+@section('link-tags')
+    {{--    Code highlighting --}}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js" defer></script>
 @endsection
 
 @section('title') {{ $post->title }} | John Braun @endsection
