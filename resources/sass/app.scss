@@ -18,6 +18,20 @@ h3 {
     @apply .pt-2 .text-black
 }
 
+@screen dark {
+    h1 {
+        @apply .text-gray-200
+    }
+
+    h2 {
+        @apply .text-gray-200
+    }
+
+    h3 {
+        @apply .text-gray-200
+    }
+}
+
 .embedded_image>p {
     @apply .text-center .italic .text-gray-800 .leading-loose
 }
@@ -41,7 +55,19 @@ p {
 }
 
 code {
-    @apply .text-red-600 .bg-gray-200 .px-1 .rounded .text-sm
+    @apply .text-red-600 .bg-gray-300 .px-1 .rounded .text-sm
+}
+
+@screen dark {
+    code {
+        @apply .text-gray-200 .bg-gray-800
+    }
+}
+
+@screen dark {
+    pre.ql-syntax {
+        @apply .bg-gray-800 .text-gray-200
+    }
 }
 
 ul {
@@ -53,6 +79,12 @@ pre {
     line-height: 1.8;
     font-size: 0.82rem;
     @apply .my-6 .bg-gray-50 .border .border-gray-300 .rounded-lg .py-4 .px-6 .shadow-md
+}
+
+@screen dark {
+    pre {
+        @apply .bg-gray-900 .border-gray-700
+    }
 }
 
 a {
