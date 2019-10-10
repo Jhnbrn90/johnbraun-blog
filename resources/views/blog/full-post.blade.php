@@ -1,6 +1,6 @@
 <article class="flex flex-col mb-10 rounded bg-white dark:bg-gray-900 dark:border dark:border-gray-800 shadow-lg sm:px-16 px-10 text-justify py-4">
     <div class="text-sm text-gray-600 font-thin">
-        &mdash; Published: {{ $post->publish_date->format('d-m-Y') }}
+        &mdash; Published: {{ $post->publish_date->format('d-m-Y') }} | <a href="#mentions">mentions</a>
     </div>
 
     <div class="mb-4">
@@ -36,7 +36,7 @@
 
 <div class="flex flex-col mb-10 rounded bg-white dark:bg-gray-900 dark:border dark:border-gray-800 shadow-lg sm:px-16 px-10 text-justify py-4">
     <div class="text-sm text-gray-600 font-normal mb-6 uppercase">
-        &mdash; Webmentions
+        &mdash; <a name="mentions"></a>Webmentions
     </div>
 
     @forelse ($post->webmentions as $mention)
