@@ -48,7 +48,7 @@ ul {
     @apply .list-disc .p-2 .m-4
 }
 
-pre.ql-syntax {
+pre {
     overflow-x: auto;
     line-height: 1.8;
     font-size: 0.82rem;
@@ -63,23 +63,23 @@ a:hover {
     @apply .text-blue-300 .underline
 }
 
-hr { 
+hr {
     margin-top: 2rem;
-    overflow: visible; /* For IE */ 
-    height: 30px; 
-    border-style: solid; 
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
     border-color: #CBD5E0;
     border-width: 1px 0 0 0;
     border-radius: 20px;
-} 
+}
 
-hr:before { 
+hr:before {
     display: block;
-    content: ""; 
-    height: 30px; 
-    margin-top: -31px; 
-    border-style: solid; 
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
     border-color: #CBD5E0;
-    border-width: 0 0 1px 0; 
-    border-radius: 20px; 
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
 }
