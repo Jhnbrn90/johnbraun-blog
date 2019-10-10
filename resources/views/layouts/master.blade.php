@@ -29,7 +29,7 @@
     <link rel="shortcut icon" href="/icons/favicon.ico">
     <link rel="webmention" href="https://webmention.io/johnbraun.blog/webmention" />
     <link rel="pingback" href="https://webmention.io/johnbraun.blog/xmlrpc" />
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     @yield('link-tags')
 </head>
 
