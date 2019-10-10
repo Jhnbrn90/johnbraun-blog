@@ -10,7 +10,7 @@ class Post extends WinkPost
 
     public function webmentions()
     {
-        return $this->hasMany(Webmention::class);
+        return $this->hasMany(Webmention::class)->latest();
     }
 
     public function previewPath()
