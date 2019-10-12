@@ -58,18 +58,6 @@ code {
     @apply .text-red-600 .bg-gray-300 .px-1 .rounded .text-sm
 }
 
-@screen dark {
-    code {
-        @apply .text-gray-200 .bg-gray-800
-    }
-}
-
-@screen dark {
-    pre.ql-syntax {
-        @apply .bg-gray-800 .text-gray-200
-    }
-}
-
 ul {
     @apply .list-disc .p-2 .m-4
 }
