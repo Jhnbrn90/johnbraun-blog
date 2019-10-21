@@ -67,8 +67,11 @@
     <pre class="ql-syntax"></pre>
     <p>
         <blockquote>
-
-    </blockquote>
+        </blockquote>
+    <div class="embedded_image">
+        <img>
+        <p></p>
+    </div>
         <a href=""></a>
         <ul><li></li></ul>
     </p>

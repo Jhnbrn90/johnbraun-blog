@@ -54,7 +54,7 @@
             </div>
             @if ($mention->content)
             <div class="w-full mt-1 pl-8">
-                <p class="italic shadow text-left w-4/5 bg-gray-300 dark:bg-gray-900 p-2 text-gray-700 dark:text-gray-500 text-sm rounded-lg border dark:border-gray-700">
+                <p class="italic shadow text-left w-4/5 bg-gray-100 dark:bg-gray-900 p-2 text-gray-700 dark:text-gray-500 text-sm rounded-lg border dark:border-gray-700">
                     {{ $mention->content }}
                 </p>
             </div>
