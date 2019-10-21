@@ -61,6 +61,7 @@ blockquote {
 .embedded_image>img {
     display: block;
     margin: 0 auto;
+    @apply .border .py-2
 }
 
 p {
