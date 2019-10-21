@@ -65,7 +65,13 @@
     </head>
     <body>
     <pre class="ql-syntax"></pre>
-    <p></p>
+    <p>
+        <blockquote>
+        
+    </blockquote>
+        <a href=""></a>
+        <ul><li></li></ul>
+    </p>
     <hr>
     <a class="hover:no-underline mr-2 px-2 py-2 rounded-lg shadow mb-2 sm:mb-0 flex-1 hover:shadow-lg hover:border border-blue-400">
         Part 1
