@@ -15,6 +15,15 @@ body {
     background: linear-gradient(90deg, rgba(255,255,255,1) 1%, rgba(246,246,246,1) 37%, rgba(245,245,245,1) 100%);
 }
 
+a {
+    @apply .text-blue-600
+}
+
+a:hover {
+    @apply .text-blue-300 .underline
+}
+
+
 h1 {
     @apply .text-3xl .text-black .py-4 .font-semibold
     }
@@ -97,14 +106,6 @@ hr:before {
     border-color: #CBD5E0;
     border-width: 0 0 1px 0;
     border-radius: 20px;
-}
-
-a {
-    @apply .text-blue-600
-}
-
-a:hover {
-    @apply .text-blue-300 .underline
 }
 
 @screen sm {
