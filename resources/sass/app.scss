@@ -4,32 +4,37 @@
 
 @tailwind utilities;
 
-h1 {
-    @apply .text-3xl .text-black
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 300;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 1%, rgba(246,246,246,1) 37%, rgba(245,245,245,1) 100%);
 }
+
+h1 {
+    @apply .text-3xl .text-black .py-4 .font-semibold
+    }
 
 h2 {
-    font-size: 2rem;
-    @apply .pt-2 .text-black
-}
+    @apply .text-black .pt-4 .pb-1 .text-xl
+    }
 
 h3 {
-    font-size: 1.5rem;
-    @apply .pt-2 .text-black
+    font-size: 1.2rem;
+    @apply .text-black .py-2 .font-semibold
+    }
+
+
+strong {
+    font-weight: 400;
 }
 
-@screen dark {
-    h1 {
-        @apply .text-gray-200
-    }
-
-    h2 {
-        @apply .text-gray-200
-    }
-
-    h3 {
-        @apply .text-gray-200
-    }
+blockquote {
+    @apply .pl-2 .border-l-2 .border-gray-500 .italic .text-sm
 }
 
 .embedded_image>p {
@@ -50,37 +55,27 @@ h3 {
 }
 
 p {
-    font-size: 1.1rem;
-    @apply .leading-relaxed .py-4
+    @apply .mb-2
 }
 
 code {
-    @apply .text-red-600 .bg-gray-300 .px-1 .rounded .text-sm
+    @apply .bg-gray-100 .px-2 .rounded .text-sm
 }
 
+
 ul {
-    @apply .list-disc .p-2 .m-4
+    @apply .py-2
+}
+
+ul > li {
+    @apply .mb-2
 }
 
 pre {
-    overflow-x: auto;
-    line-height: 1.8;
-    font-size: 0.82rem;
-    @apply .my-6 .bg-gray-50 .border .border-gray-300 .rounded-lg .py-4 .px-6 .shadow-md
-}
-
-@screen dark {
-    pre {
-        @apply .bg-gray-900 .border-gray-700
-    }
-}
-
-a {
-    @apply .text-blue-600
-}
-
-a:hover {
-    @apply .text-blue-300 .underline
+    overflow-x: scroll;
+    line-height: 1.6;
+    font-size: 0.8rem;
+    @apply .w-full .my-4 .bg-white .border .border-gray-400 .rounded .py-2 .px-3 .shadow
 }
 
 hr {
@@ -102,4 +97,49 @@ hr:before {
     border-color: #CBD5E0;
     border-width: 0 0 1px 0;
     border-radius: 20px;
+}
+
+@screen sm {
+    h2 {
+        @apply .text-2xl
+    }
+}
+
+
+@screen dark {
+    body {
+        background: rgb(0, 0, 0);
+    }
+
+    h1 {
+        @apply .text-gray-300
+    }
+
+    h2 {
+        @apply .text-gray-400
+    }
+
+    h3 {
+        @apply .text-gray-500
+    }
+
+    p {
+        @apply .text-gray-500
+    }
+
+    code {
+        @apply .bg-gray-800 .text-gray-500 .border-gray-600 .border
+    }
+
+    pre {
+        @apply .bg-gray-900 .border-gray-700
+    }
+
+    a {
+        @apply .text-blue-600
+    }
+
+    a:hover {
+        @apply .text-blue-300 .underline
+    }
 }

@@ -33,7 +33,7 @@
     @yield('link-tags')
 </head>
 
-<body class="bg-gray-100 dark:bg-gray-900">
+<body class="dark:bg-gray-900">
     <header class="mb-10 pb-5 pt-8 shadow-lg bg-white dark:bg-blue-900 dark:border-b-2 dark:border-blue-300 dark:shadow-none px-10">
         <div class="flex container mx-auto lg:max-w-screen">
             <h1 class="flex w-full text-xl">
