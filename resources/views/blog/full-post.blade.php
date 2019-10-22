@@ -25,7 +25,7 @@
 
         <div class="flex justify-center">
             <div class="flex flex-col items-center">
-                <img class="max-w-md h-56 mb-4 rounded-t-lg shadow border" src="{{ $post->featured_image }}">
+                <img class="max-w-md h-56 mb-4 rounded-t-lg" src="{{ $post->featured_image }}">
                 <span class="italic text-gray-600"> {{ $post->featured_image_caption }} </span>
             </div>
         </div>
