@@ -55,7 +55,7 @@ blockquote {
 }
 
 .embedded_image {
-    @apply .my-4
+    @apply .my-6
 }
 
 .embedded_image>img {
@@ -85,7 +85,7 @@ pre {
     overflow-x: scroll;
     line-height: 1.6;
     font-size: 0.8rem;
-    @apply .w-full .my-4 .bg-white .border .border-gray-400 .rounded .py-2 .px-3 .shadow
+    @apply .w-full .my-4 .bg-white .border .border-gray-300 .rounded .py-2 .px-3 .shadow
 }
 
 hr {
