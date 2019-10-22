@@ -1,4 +1,4 @@
-<article class="flex flex-col mb-10 rounded bg-white dark:bg-gray-900 dark:border dark:border-gray-800 shadow-lg sm:px-12 px-6 text-justify py-4">
+<article class="flex flex-col mb-10 rounded bg-white dark:bg-gray-900 dark:border dark:border-gray-800 shadow-lg sm:px-12 px-6 py-4">
     <div class="text-sm text-gray-600 font-thin">
         &mdash; Published: {{ $post->publish_date->format('d-m-Y') }} | <a href="#mentions">mentions</a>
     </div>
