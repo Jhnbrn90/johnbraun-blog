@@ -10,8 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', 'BlogController@index');
 Route::get('/posts/{slug}', 'BlogController@show');
 Route::get('/about', 'BlogController@about');
 Route::get('/preview/{slug}', 'PreviewController@show');
 Route::post('webmentions', 'WebmentionsController@store');
+
+Route::get('/{slug}', 'BlogController@show');
