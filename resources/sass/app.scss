@@ -115,36 +115,3 @@ hr:before {
     }
 }
 
-@screen dark {
-    body {
-        background: rgb(0, 0, 0);
-    }
-
-    h1 {
-        @apply .text-gray-300
-    }
-
-    h2 {
-        @apply .text-gray-300
-    }
-
-    h3 {
-        @apply .text-gray-300
-    }
-
-    p {
-        @apply .text-gray-300
-    }
-
-    code {
-        @apply .bg-blue-900 .text-gray-400 .shadow .border .border-blue-900
-    }
-
-    pre {
-        @apply .bg-gray-900 .border-gray-700
-    }
-
-    a {
-        @apply .text-blue-300
-    }
-}

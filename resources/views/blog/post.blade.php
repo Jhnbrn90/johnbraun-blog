@@ -1,14 +1,14 @@
-<article class="flex mb-10 rounded bg-white dark:bg-gray-900 dark:border dark:border-gray-700 shadow-lg p-6">
+<article class="flex mb-10 rounded bg-white shadow-lg p-6">
     <div class="w-full sm:w-3/4 flex flex-col justify-between mr-4">
         <div class="w-full text-justify">
             <a href="/posts/{{ $post->slug }}" class="hover:underline">
                 <h3 class="text-3xl font-semibold leading-tight sm:leading-loose text-left">{{ $post->title }}</h3>
             </a>
-            <p class="font-thin tracking-wide dark:text-gray-200">
+            <p class="font-thin tracking-wide">
                 <!-- {!! Str::words($post->body, 50) !!} -->
                 {{ $post->excerpt }}
                 <br><br>
-                <a class="bg-blue-600 dark:bg-blue-800 hover:no-underline hover:text-white px-2 py-2 rounded text-blue-100 hover:bg-blue-700 hover:shadow"
+                <a class="bg-blue-600 hover:no-underline hover:text-white px-2 py-2 rounded text-blue-100 hover:bg-blue-700 hover:shadow"
                 href="/posts/{{ $post->slug }}">Read more...</a>
             </p>
         </div>
@@ -20,7 +20,7 @@
     </div>
     <div class="sm:w-1/4 sm:block hidden flex justify-end items-start">
         <div class="flex h-auto w-auto overflow-hidden items-start sm:justify-center sm:items-center">
-            <img class="dark:border dark:border-gray-200" src="{{ $post->featured_image }}">
+            <img src="{{ $post->featured_image }}">
         </div>
     </div>
 </article>
