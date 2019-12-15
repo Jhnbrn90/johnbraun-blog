@@ -12,12 +12,6 @@ class WebmentionTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function setUp(): void
-    {
-        parent::setUp();
-        \Artisan::call('wink:migrate');
-    }
-
     /** @test */
     function a_webmention_has_an_author_name()
     {

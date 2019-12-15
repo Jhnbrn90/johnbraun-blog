@@ -11,15 +11,11 @@ class PreviewPostTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function setUp(): void
-    {
-        parent::setUp();
-        \Artisan::call('wink:migrate');       
-    }
-
     /** @test **/
     function a_post_can_be_previewed_by_its_slug()
     {
+        $this->withoutExceptionHandling();
+
         $post = factory(Post::class)->states('unpublished')->create([
             'title' => 'Test Post',
             'body'  => 'This is a test post.',

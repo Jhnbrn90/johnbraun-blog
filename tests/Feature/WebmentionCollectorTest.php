@@ -14,12 +14,6 @@ class WebmentionCollectorTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function setUp(): void
-    {
-        parent::setUp();
-        \Artisan::call('wink:migrate');
-    }
-
     /** @test */
     function it_can_collect_webmentions()
     {

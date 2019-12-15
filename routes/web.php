@@ -13,9 +13,9 @@
 
 Route::middleware('page-cache')->group(function () {
     Route::get('/', 'BlogController@index');
-    Route::get('/posts/{slug}', 'BlogController@show');
+    Route::get('/posts/{slug}', 'BlogController@show')->name('posts.show');
     Route::get('/about', 'BlogController@about');
 });
 
-Route::get('/preview/{slug}', 'PreviewController@show');
+Route::get('/preview/{slug}', 'PreviewController@show')->name('posts.preview');
 Route::post('webmentions', 'WebmentionsController@store');

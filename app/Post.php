@@ -13,6 +13,11 @@ class Post extends WinkPost
         return $this->hasMany(Webmention::class)->latest();
     }
 
+    public function path()
+    {
+        return "/posts/{$this->slug}";
+    }
+
     public function previewPath()
     {
         return "/preview/{$this->slug}";

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ArticleAlias;
 use App\Post;
 use Wink\WinkPage;
 use Illuminate\Http\Request;
@@ -41,7 +42,15 @@ class BlogController extends Controller
         $post = Post::with(['tags', 'webmentions'])
             ->live()
             ->whereSlug($slug)
-            ->firstOrFail();
+            ->first();
+
+        if (! $post) {
+            $alias = ArticleAlias::whereSlug($slug)->firstOrFail();
+
+            return redirect(route('posts.show', [
+                    'slug' => $alias->post->slug
+                ]));
+        }
 
         return view('blog.show', compact('post'));
     }

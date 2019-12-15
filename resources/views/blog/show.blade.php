@@ -1,8 +1,8 @@
 @extends ('layouts.master')
 
 @section('meta-tags')
-	<meta name="description" content="{{ $post->meta['meta_description'] }}">
-	<meta name="keywords" content="{{ implode(', ', $post->tags->pluck('name')->toArray()) }}">
+	<meta name="description" content="{{ $post->meta['meta_description'] ?? '' }}">
+    <meta name="keywords" content="{{ implode(', ', $post->tags->pluck('name')->toArray()) }}">
 	<meta name="author" content="John Braun">
 
 	<meta name="twitter:title" content="{{ $post->meta['twitter_title'] ?? '' }}">

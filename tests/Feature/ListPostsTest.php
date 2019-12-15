@@ -11,12 +11,6 @@ class ListPostsTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function setUp(): void
-    {
-        parent::setUp();
-        \Artisan::call('wink:migrate');       
-    }
-
     /** @test **/
     function all_published_posts_are_shown()
     {
@@ -51,7 +45,7 @@ class ListPostsTest extends TestCase
 
             $secondSeries[] = factory(Post::class)->create([
                 'title'         => "This is a second series (part {$i}/3)",
-                'publish_date'    => now()->subDays(1), 
+                'publish_date'    => now()->subDays(1),
             ]);
         }
 
