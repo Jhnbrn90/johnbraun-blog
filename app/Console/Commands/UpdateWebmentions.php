@@ -41,6 +41,8 @@ class UpdateWebmentions extends Command
     {
         $this->info('Updating all webmentions');
 
+        $this->call('page-cache:clear');
+
         $posts = Post::all();
 
         $posts->each(function ($post) {
