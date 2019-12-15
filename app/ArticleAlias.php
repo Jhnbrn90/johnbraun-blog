@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ArticleAlias extends Model
 {
+    protected $guarded = [];
+    
     public function post()
     {
         return $this->belongsTo(Post::class);

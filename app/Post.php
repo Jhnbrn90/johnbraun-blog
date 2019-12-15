@@ -18,6 +18,11 @@ class Post extends WinkPost
         return "/posts/{$this->slug}";
     }
 
+    public function route()
+    {
+        return route('posts.show', ['slug' => $this->slug]);
+    }
+
     public function previewPath()
     {
         return "/preview/{$this->slug}";

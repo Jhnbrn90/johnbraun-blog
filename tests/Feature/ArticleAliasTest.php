@@ -23,4 +23,22 @@ class ArticleAliasTest extends TestCase
 
         $this->get($alias->path())->assertRedirect($post->path());
     }
+
+    /** @test */
+    function a_new_alias_can_be_registered_using_artisan_command()
+    {
+        $post = factory(Post::class)->create(['slug' => 'original-slug']);
+        $alias = 'aliased-slug';
+
+        $this->get("/posts/{$alias}")->assertNotFound();
+
+        $this->artisan("make:alias original-slug {$alias}");
+
+        $this->assertDatabaseHas('article_aliases', [
+            'post_id' => $post->id,
+            'slug' => $alias,
+        ]);
+
+        $this->get("/posts/{$alias}")->assertRedirect($post->route());
+    }
 }
